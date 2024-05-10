@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using patrickJesusSuprano.Models;
+using patrickJesusSuprano.Models.Folha;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,5 +38,15 @@ app.MapPost("/api/folha/cadastrar",
     ctx.SaveChanges();
     return Results.Created("", folha);
 });
+
+public calcularIrrf(){
+    public double aliquota;
+
+    if((quantidade * valor) < 1903,98){
+        aliquota = 0;
+    }else if ()
+}
+
+
 
 app.Run();

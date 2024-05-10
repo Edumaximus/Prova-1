@@ -1,17 +1,28 @@
 using System.ComponentModel.DataAnnotations;
+using patrickJesusSuprano.Models.Funcionario;
 
 namespace patrickJesusSuprano.Models;
 
 public class Folha{
 
-    public string? folhaId{get; set;}
-    public double? valor{get; set;}
-    public int? quantidade{get; set;}
-    public int? mes{get; set;}
-    public int? ano{get; set;}
-    public double? salarioBruto{get; set;}
-    public double? impostoIrrf{get; set;}
-    public double? impostoInss{get; set;}
-    public double? impostoFgts{get; set;}
+    public string? FolhaId{get; set;}
+    public double? Valor{get; set;}
+    public int? Quantidade{get; set;}
+    public int? Mes{get; set;}
+    public int? Ano{get; set;}
+    public double? SalarioBruto{get; set;}
+    public double? ImpostoIrrf{get; set;}
+    public double? ImpostoInss{get; set;}
+    public double? ImpostoFgts{get; set;}
 
+    public Folha(double valor, int quantidade, int mes, int ano, string funcionarioId){
+        FolhaId = Guid.NewGuid().ToString();
+        Valor = valor;
+        Quantidade = quantidade;
+        Mes = mes;
+        Ano = ano;
+        SalarioBruto = quantidade * valor;
+        ImpostoIrrf = 
+        FuncionarioId = funcionarioId;
+    }
 }
